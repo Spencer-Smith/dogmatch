@@ -112,7 +112,7 @@ var app = new Vue({
 		this.guess2 = null;
 	},
 	forBalance: function(){
-		alert("Note: This button does not do anything. It's presence is merely to balance out the row of buttons. (It'd be kind of odd to just have two buttons there, wouldn't you agree?");
+		alert("Note: This button does not do anything. It's presence is merely to balance out the row of buttons. (It'd be kind of odd to just have two buttons there, don't you agree?)");
 	}
   },
 });
