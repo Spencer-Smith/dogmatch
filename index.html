@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Lora|Titillium+Web"> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Dog Match</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>dog match</h1>
+      <div id="content" v-if="ready">
+        <!--Matching Game-->
+		<div class="card-holder">
+			<div v-for="card in cards">
+			  <transition name="flip">
+				<div class="card-front" v-if="card.flipped || card.found" v-bind:style="{ 'background-image':'url(' + dogs[card.dog] + ')' }">
+				</div>
+				<div class="card-back" v-on:click="flipCard(card)" v-else>
+					<p>Dog Match</p>
+				</div>
+			  </transition>
+			</div>
+		</div>
+	    <!--Navigation-->
+        <div class="button_container">
+			<button v-on:click="setUpGame" title="Start a new game with the same dogs">New Game</button>
+			<button v-on:click="getDogs" title="Get new dog pictures and start a new game">Get New Dogs</button>
+			<button v-on:click="forBalance" title="A third button for balance">For Balance</button>
+		</div>
+	  </div>
+	  <div v-else>
+        <p>Fetching doggos...</p>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer">
+      <a href="https://github.com/BYU-CS260-Winter-2018/lab-3-Spencer-Smith">
+        <p><i class="fa fa-github"></i> GitHub</p>
+      </a>
+    </div>
+  </body>
+</html>

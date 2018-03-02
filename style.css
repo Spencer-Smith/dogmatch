@@ -1,0 +1,95 @@
+body {
+    font-family: 'Lora', sans-serif;
+    font-size: 16px;
+    background: #fff;
+}
+h1, h2 {
+  text-align: center;
+  font-size: 3em;
+}
+#app {
+  width: 800px;
+  margin: 0 auto 10px;
+  padding: 0;
+}
+.card-holder {
+  width: 590px;
+  height: 590px;
+  margin: 0 auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.card-back {
+  width: 140px;
+  height: 140px;
+  margin: 0;
+  background: #bff2ed;
+  cursor: pointer;
+  -webkit-transition: box-shadow .4s ease;
+  transition: box-shadow .4s ease;
+  
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Fjalla One', sans-serif;
+  padding-top: 25px;
+  line-height: 40px;
+  border-radius: 5px;
+  color: #0b3d38;
+}
+.flip-enter-active, .flip-leave-active {
+  transition: width .5s;
+}
+.flip-enter, .flip-leave-to {
+  width: 2px;
+}
+.card-back p{
+  cursor: pointer;
+}
+.card-back:hover {
+  box-shadow: 5px 5px 3px #333;
+}
+.card-front {
+  width: 140px;
+  height: 140px;
+  background: #bff2ed;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+button {
+  font-family: 'Lora', sans-serif;
+  font-size: 1em;
+}
+.button_container {
+  padding: 10px 20px;
+  width: 590px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 15px;
+  display: block;
+  font-family: 'Titillium Web';
+  font-weight: bold;
+}
+.footer a, .footer a:visited {
+  float: left;
+  color: #333;
+  opacity: .3;
+  font-size: 2em;
+  text-decoration: none;
+}
+.footer a:hover {
+  opacity: .9;
+}
+.footer p {
+  margin: 0;
+}
